@@ -35,7 +35,7 @@ cd ..
 echo "[4/4] Deploying to AWS Lambda..."
 
 
-aws lambda update-function-code --function-name "$LAMBDA_NAME" --zip-file "fileb://$ZIP_FILE"
+aws lambda update-function-code --function-name $LAMBDA_NAME --zip-file fileb://$ZIP_FILE --region $REGION
 
 
 
