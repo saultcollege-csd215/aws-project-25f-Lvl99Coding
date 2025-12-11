@@ -13,4 +13,8 @@ jobs:
                 host: 44.222.67.240
                 username: ec2-user
                 key: ${{ secrets.EC2_KEY }}
-                script_path: ls -l dice/resources/
+                script: |
+                    pwd
+                    ls -l
+                    ls -l dice/
+                    ls -l dice/resources/
