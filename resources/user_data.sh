@@ -13,7 +13,7 @@ mkdir -p $APP_DIR
 chown ec2-user:ec2-user $APP_DIR
 
 # Clone your application repository (replace with your repo URL)
-git clone https://github.com/saultcollege-csd215/aws-project-25f-Lvl99Coding.git $APP_DIR
+git clone --branch awsLab https://github.com/saultcollege-csd215/aws-project-25f-Lvl99Coding.git $APP_DIR
 
 chown -R ec2-user:ec2-user $APP_DIR
 
