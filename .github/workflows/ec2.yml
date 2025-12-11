@@ -7,6 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Print Working Directory
+              run: pwd
+              
             - name: SSH into EC2 instance and run deploy script
               uses: appleboy/ssh-action@v1
               with:
