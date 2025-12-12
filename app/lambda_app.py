@@ -19,6 +19,46 @@ def main(event, context):
     if path == '/random':
         return response(200, {"random_number": core.rand100()})
     
+    if path == '/whatsfordinner':
+        try: 
+            food = ['pizza', 'pasta', 'steak', 'schwarma', 'ramen', 'bacon and eggs', 'stew', 'stir fry', 'hot dogs', 'burgers']
+            num = core.rand100()
+            choice = ''
+
+            if num <= 10:
+                choice = food[0]
+            
+            if num <= 20 and num > 10:
+                choice = food[1]
+            
+            if num <= 30 and num > 20:
+                choice = food[2]
+            
+            if num <= 40 and num > 30:
+                choice = food[3]
+            
+            if num <= 50 and num > 40:
+                choice = food[4]
+            
+            if num <= 60 and num > 50:
+                choice = food[5]
+            
+            if num <= 70 and num > 60:
+                choice = food[6]
+            
+            if num <= 80 and num > 70:
+                choice = food[7]
+            
+            if num <= 90 and num > 80:
+                choice = food[8]
+            
+            if num <= 100 and num > 90:
+                choice = food[9]
+        except Exception as e:
+            return response(500, {'error': str(e)})
+        
+        return response(200, {"dinner": choice})
+    
     if path.startswith('/roll/d'):
         try:
             num_faces = int(path.split('/roll/d')[-1])
