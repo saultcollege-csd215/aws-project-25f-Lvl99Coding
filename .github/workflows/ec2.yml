@@ -7,6 +7,12 @@ jobs:
         runs-on: ubuntu-latest
 
         steps: 
+            
+            - name: Checkout Code
+              uses: actions/checkout@v5
+              with:
+                ref: awsLab
+
             - name: SSH into EC2 instance and run deploy script
               uses: appleboy/ssh-action@v1
               with:
